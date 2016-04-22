@@ -20,6 +20,8 @@
     NewFeatures::testNullCoalescingOperator( 2, "test string 1" );
     $test1->testSpaceshipOperator( 1, "test2" );
     $test1->testConstantArraysViaDefine( 1, "test2" );
+    $test1->testAnonymousClasses();
+
 
     //close HTML body
     echo '</body>';

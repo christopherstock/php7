@@ -19,7 +19,7 @@
         *   @param  int    $test1
         *   @param  string $test2
         ***************************************************************/
-        public static function testSpaceshipOperator( int $test1, string $test2)
+        public function testSpaceshipOperator( int $test1, string $test2)
         {
             Debug::out( DebugColor::GREEN, 'NewFeatures::testSpaceshipOperator() being invoked [' . $test1 . '][' . $test2 . ']' );
 
@@ -39,7 +39,7 @@
         *   @param  int    $test1
         *   @param  string $test2
         ***************************************************************/
-        public static function testConstantArraysViaDefine( int $test1, string $test2)
+        public function testConstantArraysViaDefine( int $test1, string $test2)
         {
             Debug::out( DebugColor::GREEN, 'NewFeatures::testConstantArraysViaDefine() being invoked [' . $test1 . '][' . $test2 . ']' );
 
@@ -47,6 +47,41 @@
 
             Debug::out( DebugColor::BLUE, 'Constant array 2nd element is [' . MY_CONSTANT_ARRAY[ 2 ] . ']' );
         }
+
+        /***************************************************************
+        *   Tests usage of anonymous classes.
+        ***************************************************************/
+        public function testAnonymousClasses()
+        {
+            Debug::out( DebugColor::GREEN, 'NewFeatures::testAnonymousClasses() being invoked' );
+
+            /***************************************************************
+            *   An anonymous inner class.
+            ***************************************************************/
+            $test1 = new class
+            {
+                /***************************************************************
+                *   Returns a constant string.
+                *
+                *   @return string
+                ***************************************************************/
+                public function myTest() : string
+                {
+                    return 'myTest Return-String';
+                }
+            };
+
+            $myTestValue = $test1->myTest();
+
+            Debug::out( DebugColor::BLUE, 'Return value from anonymous class is [' . $myTestValue . ']' );
+        }
+
+
+
+
+
+
+
 
         /***************************************************************
         *   Tests the new null-coalescing operator.
