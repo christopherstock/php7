@@ -10,7 +10,7 @@
         ***************************************************************/
         public function __construct()
         {
-            Debug::out( DebugColor::GREEN, 'NewFeatures::construct() being invoked' );
+            Debug::out( DebugColor::GREEN, 'NewFeatures->construct() being invoked' );
         }
 
         /***************************************************************
@@ -21,7 +21,7 @@
         ***************************************************************/
         public function testSpaceshipOperator( int $test1, string $test2)
         {
-            Debug::out( DebugColor::GREEN, 'NewFeatures::testSpaceshipOperator() being invoked [' . $test1 . '][' . $test2 . ']' );
+            Debug::out( DebugColor::GREEN, 'NewFeatures->testSpaceshipOperator() being invoked [' . $test1 . '][' . $test2 . ']' );
 
             $test3 = ( 1 <=> 3 );
 
@@ -30,7 +30,7 @@
 
             $test3 = ( $time1 <=> $time2 );
 
-            Debug::out( DebugColor::BLUE, 'Spaceship operation results to [' . $test3 . ']' );
+            Debug::out( DebugColor::BLUE, 'Spaceship operation results to [' . $test3 . ']<br>' );
         }
 
         /***************************************************************
@@ -41,11 +41,11 @@
         ***************************************************************/
         public function testConstantArraysViaDefine( int $test1, string $test2)
         {
-            Debug::out( DebugColor::GREEN, 'NewFeatures::testConstantArraysViaDefine() being invoked [' . $test1 . '][' . $test2 . ']' );
+            Debug::out( DebugColor::GREEN, 'NewFeatures->testConstantArraysViaDefine() being invoked [' . $test1 . '][' . $test2 . ']' );
 
             define( 'MY_CONSTANT_ARRAY', array( 0, 1, 2, 3, 4, ) );
 
-            Debug::out( DebugColor::BLUE, 'Constant array 2nd element is [' . MY_CONSTANT_ARRAY[ 2 ] . ']' );
+            Debug::out( DebugColor::BLUE, 'Constant array 2nd element is [' . MY_CONSTANT_ARRAY[ 2 ] . ']<br>' );
         }
 
         /***************************************************************
@@ -53,7 +53,7 @@
         ***************************************************************/
         public function testAnonymousClasses()
         {
-            Debug::out( DebugColor::GREEN, 'NewFeatures::testAnonymousClasses() being invoked' );
+            Debug::out( DebugColor::GREEN, 'NewFeatures->testAnonymousClasses() being invoked' );
 
             /***************************************************************
             *   An anonymous inner class.
@@ -73,8 +73,21 @@
 
             $myTestValue = $test1->myTest();
 
-            Debug::out( DebugColor::BLUE, 'Return value from anonymous class is [' . $myTestValue . ']' );
+            Debug::out( DebugColor::BLUE, 'Return value from anonymous class is [' . $myTestValue . ']<br>' );
         }
+
+        /***************************************************************
+        *   Tests usage of the unicode codepoint escape syntax.
+        ***************************************************************/
+        public function testUnicodeCodepointEscapeSyntax()
+        {
+            Debug::out( DebugColor::GREEN, 'NewFeatures->testUnicodeCodepointEscapeSyntax() being invoked' );
+
+            $utf8 = "\u{9999}";
+
+            Debug::out( DebugColor::BLUE, 'Unicode codepoint escape value is [' . $utf8 . ']<br>' );
+        }
+
 
 
 
@@ -96,7 +109,7 @@
 
             $test4 = $undefinedVariable ?? 'myTest';
 
-            Debug::out( DebugColor::BLUE, 'Coalescing operation results to [' . $test4 . ']' );
+            Debug::out( DebugColor::BLUE, 'Coalescing operation results to [' . $test4 . ']<br>' );
 
             return array( 1, 2, 3, );
         }

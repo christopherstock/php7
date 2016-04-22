@@ -10,17 +10,21 @@
     echo '</head>';
 
     //open HTML body
-    echo '<body style="background: #101010; font-family: verdana, sans-serif; color: #ff0000; margin: 25px; line-height: 175%;">';
+    echo '<body style="background: #101010; font-family: verdana, sans-serif; color: #ff0000; margin: 25px; line-height: 125%;">';
 
     //output a debug message
-    Debug::out( DebugColor::GREEN, 'index.php being invoked' );
+    Debug::out( DebugColor::GREEN, 'index.php being invoked<br>' );
+
+    //invoke a static function
+    NewFeatures::testNullCoalescingOperator( 2, "test string 1" );
 
     //create a test class instance
-    $test1 = new NewFeatures();
-    NewFeatures::testNullCoalescingOperator( 2, "test string 1" );
-    $test1->testSpaceshipOperator( 1, "test2" );
-    $test1->testConstantArraysViaDefine( 1, "test2" );
-    $test1->testAnonymousClasses();
+    $myNewFeatureInstance = new NewFeatures();
+    $myNewFeatureInstance->testSpaceshipOperator( 1, "test2" );
+    $myNewFeatureInstance->testConstantArraysViaDefine( 1, "test2" );
+    $myNewFeatureInstance->testAnonymousClasses();
+    $myNewFeatureInstance->testUnicodeCodepointEscapeSyntax();
+
 
 
     //close HTML body
