@@ -18,7 +18,7 @@
     //create a test class instance
     $test1 = new NewFeatures();
     NewFeatures::testNullCoalescingOperator( 2, "test string 1" );
-    $test1->myTestMethod( 1, "test2" );
+    $test1->testSpaceshipOperator( 1, "test2" );
 
     //close HTML body
     echo '</body>';

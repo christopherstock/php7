@@ -14,18 +14,27 @@
         }
 
         /***************************************************************
-        *   A test method.
+        *   Tests the new spaceship operator.
         *
         *   @param  int    $test1
         *   @param  string $test2
         ***************************************************************/
-        public static function myTestMethod( int $test1, string $test2)
+        public static function testSpaceshipOperator( int $test1, string $test2)
         {
-            Debug::out( DebugColor::GREEN, 'NewFeatures::myTestMethod() being invoked [' . $test1 . '][' . $test2 . ']' );
+            Debug::out( DebugColor::GREEN, 'NewFeatures::testSpaceshipOperator() being invoked [' . $test1 . '][' . $test2 . ']' );
+
+            $test3 = ( 1 <=> 3 );
+
+            $time1 = new DateTime( '2016-04-01 23:11:23' );
+            $time2 = new DateTime( '2016/04/02 23:11:23' );
+
+            $test3 = ( $time1 <=> $time2 );
+
+            Debug::out( DebugColor::BLUE, 'Spaceship operation results to [' . $test3 . ']' );
         }
 
         /***************************************************************
-        *   Tests the new null-coalescing-Operator.
+        *   Tests the new null-coalescing operator.
         *
         *   @param  int    $test1
         *   @param  string $test2
