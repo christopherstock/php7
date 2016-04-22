@@ -19,9 +19,9 @@
         *   @param  int    $test1
         *   @param  string $test2
         ***************************************************************/
-        public static function myTestMethod($test1, $test2)
+        public static function myTestMethod( int $test1, string $test2)
         {
-            echo 'MyTestApp::myTestMethod() being invoked<br><br>';
+            echo 'MyTestApp::myTestMethod() being invoked [' . $test1 . '][' . $test2 . ']<br><br>';
         }
 
         /***************************************************************
@@ -29,14 +29,14 @@
         *
         *   @param  int    $test1
         *   @param  string $test2
-        *   @return string
+        *   @return array
         ***************************************************************/
-        public static function myStaticTestFunction($test1, $test2)
+        public static function myStaticTestFunction( int $test1, string $test2 ) : array
         {
-            echo 'MyTestApp::myStaticTestFunction() being invoked<br><br>';
+            echo 'MyTestApp::myStaticTestFunction() being invoked [' . $test1 . '][' . $test2 . ']<br><br>';
 
 
 
-            return 'Test';
+            return array( 1, 2, 3, );
         }
     }

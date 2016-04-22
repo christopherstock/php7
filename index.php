@@ -6,9 +6,9 @@
 
     $test1 = new MyTestApp();
 
-    MyTestApp::myStaticTestFunction( 1, "test string 1" );
+    MyTestApp::myStaticTestFunction( 2, "test string 1" );
     
-    $test1->myTestMethod(1, "");
+    $test1->myTestMethod( 1, "test2" );
 
 
 
