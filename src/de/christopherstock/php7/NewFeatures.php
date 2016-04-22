@@ -34,6 +34,21 @@
         }
 
         /***************************************************************
+        *   Tests constant arrays via 'define' keyword.
+        *
+        *   @param  int    $test1
+        *   @param  string $test2
+        ***************************************************************/
+        public static function testConstantArraysViaDefine( int $test1, string $test2)
+        {
+            Debug::out( DebugColor::GREEN, 'NewFeatures::testConstantArraysViaDefine() being invoked [' . $test1 . '][' . $test2 . ']' );
+
+            define( 'MY_CONSTANT_ARRAY', array( 0, 1, 2, 3, 4, ) );
+
+            Debug::out( DebugColor::BLUE, 'Constant array 2nd element is [' . MY_CONSTANT_ARRAY[ 2 ] . ']' );
+        }
+
+        /***************************************************************
         *   Tests the new null-coalescing operator.
         *
         *   @param  int    $test1
