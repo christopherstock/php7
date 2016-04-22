@@ -10,7 +10,7 @@
         ***************************************************************/
         public function __construct()
         {
-            echo 'MyTestApp::construct() being invoked<br><br>';
+            Debug::out( DebugColor::GREEN, 'MyTestApp::construct() being invoked' );
         }
 
         /***************************************************************
@@ -21,7 +21,7 @@
         ***************************************************************/
         public static function myTestMethod( int $test1, string $test2)
         {
-            echo 'MyTestApp::myTestMethod() being invoked [' . $test1 . '][' . $test2 . ']<br><br>';
+            Debug::out( DebugColor::GREEN, 'MyTestApp::myTestMethod() being invoked [' . $test1 . '][' . $test2 . ']' );
         }
 
         /***************************************************************
@@ -33,9 +33,7 @@
         ***************************************************************/
         public static function myStaticTestFunction( int $test1, string $test2 ) : array
         {
-            echo 'MyTestApp::myStaticTestFunction() being invoked [' . $test1 . '][' . $test2 . ']<br><br>';
-
-
+            Debug::out( DebugColor::BLUE, 'MyTestApp::myStaticTestFunction() being invoked [' . $test1 . '][' . $test2 . ']' );
 
             return array( 1, 2, 3, );
         }
