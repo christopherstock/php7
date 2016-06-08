@@ -83,9 +83,9 @@
         {
             Debug::out( DebugColor::GREEN, 'NewFeatures->testUnicodeCodepointEscapeSyntax() being invoked' );
 
-            $utf8 = "\u{9999}";
+            $utf8 = "\u{9998}";
 
-            Debug::out( DebugColor::BLUE, 'Unicode codepoint escape value is [' . $utf8 . ']<br>' );
+            Debug::out( DebugColor::BLUE, 'The Unicode codepoint escape value is [' . $utf8 . ']<br>' );
         }
 
 
