@@ -5,6 +5,8 @@
     ***************************************************************/
     class Debug
     {
+        public $myDebugValue = 7;
+
         /***************************************************************
         *   Debugs out the test string in the specified color.
         *

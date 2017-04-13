@@ -88,6 +88,36 @@
             Debug::out( DebugColor::BLUE, 'The Unicode codepoint escape value is [' . $utf8 . ']<br>' );
         }
 
+        /***************************************************************
+        *   Tests usage of closure calls.
+        ***************************************************************/
+        public function testClosureCall()
+        {
+            // Alex
+        }
+
+        /***************************************************************
+        *   Tests usage of filtered unserialize.
+        ***************************************************************/
+        public function testFilteredUnserialize()
+        {
+            Debug::out( DebugColor::GREEN, 'NewFeatures->testFilteredUnserialize() being invoked' );
+
+            $myDebugObject = new Debug();
+
+            $mySerializedDebugObject = serialize( $myDebugObject );
+
+            Debug::out( DebugColor::BLUE, "Serialized debug object: [" . $mySerializedDebugObject . "]" );
+
+
+
+
+
+        }
+
+
+
+
 
 
 

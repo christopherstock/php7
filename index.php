@@ -25,6 +25,13 @@
     $myNewFeatureInstance->testAnonymousClasses();
     $myNewFeatureInstance->testUnicodeCodepointEscapeSyntax();
 
+    $myNewFeatureInstance->testClosureCall();
+
+    $myNewFeatureInstance->testFilteredUnserialize();
+
+
+
+
 
 
     //close HTML body
